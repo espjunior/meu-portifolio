@@ -1,0 +1,429 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;400&display=swap');
+
+/* ---- CONFIGURAÇÕES GERAIS ---- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    
+
+    text-decoration: none; /*RETIRAR O SUBLINHADO DO LINK*/
+    list-style: none; /*RETIRAR AS BOLINHAS DA LISTA*/
+    
+}
+
+h1, h2 {
+    font-family: 'Poppins', sans-serif;
+}
+
+p {
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.interface { /*ESPAÇO PADRÃO PARA TODO O SITE*/
+    padding: 10px 5%;
+}
+
+/* ------------------------------------ */
+
+/* ---- CABEÇALHO-LOGOMARCA-MENU-MIDIAS SOCIAIS ---- */
+header {
+    background-color:  #110233;
+}
+
+header .interface {
+    display: flex;
+    justify-content: space-between; /*SEPARR LOGO-MENU-MIDAS SOCIAIS*/
+    align-items: center;
+}
+
+header .menu ul {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+}
+
+/* ---- ESTILZANDO A FONTE FO MENU ---- */
+.menu ul a {
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+
+/* ---- BOTÕES DAS MÍDIAS SOCIAIS */
+.midias-sociais {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-size: 22px;
+}
+
+.midias-sociais i {
+    background-color: rgb(17, 17, 214);
+    padding: 10px;
+    border-radius: 20px;
+    border: 0;
+    color: #fff;
+}
+
+/* ------------------ MENU MOBILE ------------------ */
+
+header .btn-abrir-menu i {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items:right;
+    color: #fff;
+    font-size: 30px;
+    
+}
+
+.menu-mobile {
+    background-color:  rgb(3, 1, 12);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 0%;
+    overflow: hidden;
+    transition: .5s;
+}
+
+/*classe cirada no JAVASCRIPT "abrir-menu"*/
+.menu-mobile.abrir-menu { 
+    width: 70%;
+}
+
+.menu-mobile.abrir-menu ~ .overlay-menu {
+    display: block;
+}
+
+/* ------------------------------------- */
+
+
+.menu-mobile .btn-fechar i { /*ESTILIZANDO O O BOTÃO X*/
+    color: #fff;
+    font-size: 40px; /*TAMANHO DO BOTÃO*/
+}
+
+.btn-fechar {
+    padding: 20px 5%;
+}
+
+
+.menu-mobile nav ul {
+    text-align: right;
+}
+
+.menu-mobile nav ul li a {
+    color: #fff;
+    font-size: 25px; /*TAMANHO DAS FONTES DO MENU MOBILE*/
+    font-weight: 300;
+    padding: 20px 8%;
+    display: block;
+}
+
+.menu-mobile nav ul li a:hover {
+    background-color: blue;
+    color: #110233;
+}
+
+
+.overlay-menu { /*Deixar a parte do fundo opaca ao abrir o menu*/
+    background-color: #000000df;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 88888;
+    display: none;
+}
+
+
+/* ------------ MAIN --------------- */
+
+main {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url(../imagens/bg001.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+main .interface {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+}
+
+span {
+    color: rgb(17, 17, 214);
+}
+
+.texto-main h1 {
+    color: #fff;
+    font-size: 60px;
+    font-weight: bolder;
+    
+}
+
+.texto-main h3 {
+    color: rgb(17, 17, 214);
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 5px;
+}
+
+/* ---- CONFIGURANDO A IMAGEM DO MAIN ---- */
+.img-main img {
+    margin-top: 30px;
+    width: 400px;
+}
+
+
+/* ---- SOBRE MIM ---- */
+
+.secao-sobre-mim {
+    padding: 10px 5%;
+    background-color: rgb(3, 3, 48);
+}
+
+.secao-sobre-mim .titulo-secao { /*TITULO DA SECAO SOBRE MIM*/
+    color: #fff;
+    font-size: 55px;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.elementos {
+    display: flex;
+    justify-content: center;
+}
+
+.elementos .midias-sociais { /*DEIXAR OS BOTÕES DE MIDAS ABAIXO DO TEXTO NO LADO ESQUERDO*/
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-left: 15px;
+    margin-bottom: 30px;
+}
+
+.img-sobre img {
+    width: 250px;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+.txt-sobre h2 { /*CONFIGURAÇÃO DO OLA SOU EDVALDO JUNIOR*/
+    color: #fff;
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 40px;
+}
+
+.txt-sobre p {
+    color: #fff;
+    margin-left: 20px;
+    text-align: justify;
+    text-indent: 40px;
+    line-height: 35px;
+    font-size: 20px;
+}  
+
+/* --- CONFIGURAÇÃO BOTÃO DA SECAO SOBRE MIM --- */
+.secao-sobre-mim .midias-sociais i {
+    margin-top: 30px;
+    font-size: 40px;
+    background-color: rgb(17, 17, 214);
+}
+
+/* --- PROJETOS --- */
+
+.secao-projetos .titulo-secao { /*TITULO DE MEUS PROJETOS */
+    color: #fff;
+    font-size: 55px;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+
+.secao-projetos {
+    padding: 10px 5%;
+    background-color: rgb(2, 4, 5); /*FUNDO DA SEÇÃO PROJETOS*/
+}
+
+.todos-projetos {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+
+/* --- CONFIGURANDO O BOTÃO VER PROJETO --- */
+.botao button {
+    margin-top: 10px;
+    background-color: rgb(2, 4, 5); /*FUNDO DO BOTÃO*/
+    border-radius: 20px; /*ARREDONDAMENTO DO BOTÃO*/
+    padding: 10px; /*ESPÇAO INTERNO DO BOTÃO*/
+    color: #fff; /*COR DA FONTE DO BOTÃO*/
+    cursor: pointer; /*MAOZINHA DO CURSO*/
+}
+/* ----------------------------------------- */
+
+/* --- ESTILZANDO SO TRÊS PROJETOS --- */
+.projeto-01 {
+    border: 5px solid black;
+    background-color: rgb(78, 81, 255);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 300px;
+}
+
+.projeto-01 p {
+    font-size: 13px;
+    text-align: center;
+}
+
+/* ------------------------------- */
+
+.projeto-02 {
+    border: 5px solid black;
+    background-color: rgb(78, 81, 255);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 300px;
+}
+
+.projeto-02 p {
+    font-size: 13px;
+    text-align: center;
+}
+
+/* ------------------------------- */
+
+.projeto-03 {
+    border: 5px solid black;
+    background-color: rgb(78, 81, 255);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 300px;
+}
+
+.projeto-03 p {
+    font-size: 13px;
+    text-align: center;
+}
+/* ----------------------------------------- */
+
+/* RODAPE */
+
+footer {
+    padding: 10px 5%;
+    background-color: rgb(3, 3, 48);
+    color: #fff;
+}
+
+.titulo-rodape {
+    margin-top: 80px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.texto-rodape {
+    border-top: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rodape-midias i {
+    margin-top: 5px;
+    font-size: 20px;
+}
+
+/* -------------- MEDIA QUERY ----------------- */
+
+@media screen and (max-width: 843px) {
+    /* MENU E BOTOES */
+    .menu, .midias-sociais {
+        display: none;
+    }
+
+
+    .interface {
+        flex-direction: column;
+    }
+
+    /* MAIN */
+    .texto-main h1{
+        text-align: center;
+        margin-top: 50%;
+    }
+
+    .texto-main h3 {
+        text-align: center;
+    }
+
+    .img-main {
+        display: none;
+    }
+
+    /* SOBRE MIM */
+    .secao-sobre-mim {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .secao-sobre-mim .titulo-secao { /*TITULO DA SECAO*/
+        color: #fff;
+        font-size: 40px;
+        
+    }
+    
+    .txt-sobre h2 { /*SUBTITULO*/
+        font-size: 30px;
+    }
+
+    .txt-sobre p { /*PARAGRAFO*/
+        margin-right: 20px;
+    }
+
+    .elementos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* MEUS PROJETOS */
+
+    .secao-projetos .titulo-secao { /*TITULO DE MEUS PROJETOS */
+        color: #fff;
+        font-size: 45px;
+    
+    }
+    
+
+
+}   
