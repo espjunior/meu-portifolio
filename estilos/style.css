@@ -364,18 +364,29 @@ footer {
 
 /* -------------- MEDIA QUERY ----------------- */
 
-@media screen and (max-width: 843px) {
+@media screen and (max-width: 883px) {
     /* MENU E BOTOES */
+
     .menu, .midias-sociais {
         display: none;
     }
 
+    /* .img-logo, .btn-abrir-menu {
+        display: flex;    
+        flex-direction: row;
+    } */
 
-    .interface {
+    /* .interface {
         flex-direction: column;
-    }
+    } */
 
     /* MAIN */
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
     .texto-main h1{
         text-align: center;
         margin-top: 50%;
